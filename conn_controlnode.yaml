@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  connection: local
+
+  tasks:
+    - name: Get local information
+      debug:
+        var: hostvars[inventory_hostname]
+        verbosity: 1
+# To run this use: ansible-playbook conn_controlnode.yaml -v
+# Amount of -vvvv  can be from 0 to 4
+# connection: local -> means we don't use SSH
